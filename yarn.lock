@@ -6328,6 +6328,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"component-library@file:../../::locator=nextjs%40workspace%3Aexamples%2Fnextjs":
+  version: 0.0.0
+  resolution: "component-library@file:../../#../../::hash=9f5983&locator=nextjs%40workspace%3Aexamples%2Fnextjs"
+  peerDependencies:
+    "@types/react": ^17.0.0 || ^18.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+  checksum: 912eab8dca5959279831a0f3de1ddaccc84916795e53a8407d642945e737640929dc59d7d7f50d09cde5dc514601e6ef30aab9e20bf0139097db23eb2bee6071
+  languageName: node
+  linkType: hard
+
 "compressible@npm:~2.0.16":
   version: 2.0.18
   resolution: "compressible@npm:2.0.18"
@@ -11723,11 +11734,13 @@ __metadata:
     "@types/node": 17.0.38
     "@types/react": 18.0.10
     "@types/react-dom": 18.0.5
+    component-library: "file:../../"
     eslint: 8.16.0
     eslint-config-next: 12.1.6
     next: 12.1.6
     react: 18.1.0
     react-dom: 18.1.0
+    ress: ^5.0.2
     typescript: 4.7.2
   languageName: unknown
   linkType: soft
