@@ -1,6 +1,9 @@
 {
   "name": "component-library-vite-linaria-boilerplate",
   "private": true,
+  "workspaces": [
+    "examples/**/*"
+  ],
   "version": "0.0.0",
   "types": "./types/index.d.ts",
   "files": [
