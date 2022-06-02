@@ -3,7 +3,7 @@ name: Test
 on: push
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: '16'
           cache: 'yarn'
-      - run: yarn
-      - run: yarn test
+      - name: Install
+        run: yarn
+      - name: Test
+        run: yarn test
 

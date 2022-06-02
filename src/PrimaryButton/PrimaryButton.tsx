@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styled from 'styled-components'
+import { styled } from '@linaria/react'
 import { colors } from '../styles'
 import { typography } from '../styles/typography'
 
@@ -17,13 +17,13 @@ export const PrimaryButton: FC<PrimaryButtonProps> = ({ text, onClick, fontSize 
   </>
 )
 
-const Text = styled.span<{ fontSize: string }>(({ fontSize }) => ({
-  fontSize,
-  fontWeight: typography.weight.bold,
-  color: colors.light.black,
-}))
+const Text = styled.span<{ fontSize: string }>`
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${typography.weight.bold};
+  color: ${colors.light.black};
+`
 
-const Button = styled.button({
-  backgroundColor: colors.light.primary,
-  padding: '10px 25px',
-})
+const Button = styled.button`
+  background-color: ${colors.light.primary};
+  padding: 10px 25px;
+`
