@@ -1,6 +1,6 @@
 {
   "name": "component-library-vite-linaria-boilerplate",
-  "private": true,
+  "private": false,
   "workspaces": [
     "examples/**/*"
   ],
