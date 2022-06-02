@@ -1,5 +1,7 @@
 # component-library-react-vite-linaria-boilerplate
 
+A component library (design system) boilerplate with TypeScript and React, linaria, Vite, Vitest, Storybook
+
 ## Tech Stack
 
 - Storybook
