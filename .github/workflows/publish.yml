@@ -1,15 +1,12 @@
-name: Publish node package to GitHub Packages
+name: Publish
 
 on:
   release:
     types: [published]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -20,10 +17,12 @@ jobs:
           cache: 'yarn'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@locol23'
-      - run: |
-          yarn
-          yarn build
-          yarn npm publish
+      - name: Install
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
