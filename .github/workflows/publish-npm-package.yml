@@ -1,21 +1,22 @@
-name: npm package
+name: Publish npm package to GitHub Packages
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 10
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '16.x'
           cache: 'yarn'
-          registry-url: 'http://npm.pkg.github.com'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@locol23'
       - run: |
           yarn
           yarn build
